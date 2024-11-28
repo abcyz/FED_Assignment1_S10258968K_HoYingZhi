@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="confirmingstyle.css">
+    <script src="confirmingstyle.js"></script>
+    <title>Gaming PC Page</title>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <input type="search" placeholder="Search..." class="search_bar">
+        <div class="nav-icons">
+            <img src="images/SignIn.jpg" alt="Sign In" class="icon">
+            <img src="images/Heart.png" alt="Heart" class="icon">
+            <img src="images/Cart.jpg" alt="Cart" class="icon">
+        </div>
+    </div>
+    
+    <div class="headernavbar">
+        <div>HOME</div>
+        <div>GAMING PCS</div>
+        <div>LAPTOP</div>
+        <div>ACCESSORIES</div>
+        <div>ABOUT US</div>
+        <div>CONTACT US</div>
+    </div>
+
+
+    <section class="product-showcase">
+        <div class="image-gallery">
+            <div class="main-image-container">
+                <button class="arrow left-arrow" onclick="previousImage()">&#9664;</button>
+                <img id="mainImage" src="images/product1.jpg" alt="Main Product Image">
+                <button class="arrow right-arrow" onclick="nextImage()">&#9654;</button>
+            </div>
+            <div class="thumbnail-container">
+                <img src="images/product1.jpg" alt="Thumbnail 1" class="thumbnail" onclick="changeImage(0)">
+                <img src="images/product2.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeImage(1)">
+                <img src="images/product3.jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeImage(2)">
+                <img src="images/product4.jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeImage(3)">
+            </div>
+        </div>
+    
+        <div class="product-details">
+            <h1 class="product-name">Product Name</h1>
+            <p class="product-price">SGD $999</p>
+    
+            <div class="product-specs">
+                <div class="spec">
+                    <img src="icons/icon1.png" alt="Spec Icon" class="spec-icon">
+                    <p>Spec Description 1</p>
+                </div>
+                <div class="spec">
+                    <img src="icons/icon2.png" alt="Spec Icon" class="spec-icon">
+                    <p>Spec Description 2</p>
+                </div>
+                <div class="spec">
+                    <img src="icons/icon3.png" alt="Spec Icon" class="spec-icon">
+                    <p>Spec Description 3</p>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button>Food</button>
+                <div class="content">
+                    <a href="">
+                        <img src="images/food1.jpg" alt="Apple Image" class="dropdown-img">
+                        Apple
+                    </a>
+                    <a href="">
+                        <img src="images/food2.jpg" alt="Banana Image" class="dropdown-img">
+                        Banana
+                    </a>
+                    <a href="">
+                        <img src="images/food3.jpg" alt="Cherry Image" class="dropdown-img">
+                        Cherry
+                    </a>
+                </div>
+            </div>
+    
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-section">
+            <h3>PRODUCTS</h3>
+            <ul>
+                <li>Gaming PCs</li>
+                <li>Laptops</li>
+                <li>Accessories</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>COMPANY</h3>
+            <ul>
+                <li>About</li>
+                <li>Careers</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>NEED HELP?</h3>
+            <ul>
+                <li>Support</li>
+                <li>FAQ</li>
+            </ul>
+        </div>
+        <div class="footer-section contact-section">
+            <h3>CONTACT</h3>
+            <p>Bishan City, Street 22</p>
+            <p>Singapore 98302 #3-03</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,244 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    width: 180px;
+    height: auto;
+}
+
+.search_bar {
+    flex: 1;
+    max-width: 600px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    margin: 0 20px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+/* Header Navbar */
+.headernavbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.headernavbar > div {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.headernavbar > div:hover {
+    color: #007bff;
+}
+
+/* Latest Releases Section */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjust spacing as needed */
+    gap: 400px; /* Space between the text items */
+    flex-wrap: wrap; /* Wrap on smaller screens */
+    margin: 20px;
+}
+
+.title-container h2 {
+    flex: 0 0 auto;
+    font-weight: bold;
+    color: #333;
+    margin-left: 30px;
+    font-size:64px !important;
+}
+
+.title-container h1 {
+    flex: 1; /* Allow this element to take available space */
+    font-size: 25px;
+    color: #555;
+    text-align: left; /* Align text to the left */
+}
+
+.latest-releases {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.latest-releases h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.pricebar{
+    
+}
+
+.buy-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.release-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+
+.release-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.release-item h4{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.release-image {
+    width: 400px;
+    height: 300px;
+    border-radius: 8px;
+}
+.product_name{
+    font-size: 20px;
+}
+
+.release-description p {
+    font-size: 14px;
+    margin: 5px 0;
+    color: #666;
+}
+
+.release-description h4{
+    font-size: 25px;
+}
+
+@media (max-width: 1080px) {
+    .release-item {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+}
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-section {
+    margin-left: auto;
+    text-align: right;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-section ul li:hover,
+.footer-section p:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1080px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .contact-section {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .footer-section ul,.footer-section p {
+        display: none;
+    }
+
+    .footer-section h3:hover + ul, .footer-section h3:hover + p {
+        display: block;
+    }
+}
