@@ -21,3 +21,7 @@ function goToContactUsPage(productId) {
 function goToHomePage(productId) {
     window.location.href = 'index.html?id=' + productId;
 }
+
+function goToCheckout(productId) {
+    window.location.href = 'checkout.html?id=' + productId;
+}
