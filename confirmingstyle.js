@@ -1,37 +1,51 @@
-let currentImageIndex = 0;
-const images = [
-    "images/product1.jpg",
-    "images/product2.jpg",
-    "images/product3.jpg",
-    "images/product4.jpg"
-];
+document.addEventListener('DOMContentLoaded', () => {
+    const mainImage = document.getElementById('mainImage');
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
 
-function changeImage(index) {
-    currentImageIndex = index;
-    document.getElementById("mainImage").src = images[currentImageIndex];
-    updateThumbnails();
-}
+    const images = [
+        'images/Product1.jpg',
+        'images/Info-1.jpg',
+        'images/Info-2.jpg',
+        'images/Info-3.jpg'
+    ];
 
-function nextImage() {
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-    document.getElementById("mainImage").src = images[currentImageIndex];
-    updateThumbnails();
-}
+    let currentImageIndex = 0;
 
-function previousImage() {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    document.getElementById("mainImage").src = images[currentImageIndex];
-    updateThumbnails();
-}
+    function changeImage(index) {
+        currentImageIndex = index;
+        mainImage.src = images[currentImageIndex];
+        updateThumbnailActive();
+    }
 
-function updateThumbnails() {
-    const thumbnails = document.querySelectorAll(".thumbnail");
-    thumbnails.forEach((thumbnail, index) => {
-        thumbnail.classList.toggle("active", index === currentImageIndex);
+    function updateThumbnailActive() {
+        thumbnails.forEach((thumb, index) => {
+            thumb.classList.toggle('active', index === currentImageIndex);
+        });
+    }
+
+    function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        mainImage.src = images[currentImageIndex];
+        updateThumbnailActive();
+    }
+
+    function previousImage() {
+        currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+        mainImage.src = images[currentImageIndex];
+        updateThumbnailActive();
+    }
+
+    thumbnails.forEach((thumb, index) => {
+        thumb.addEventListener('click', () => changeImage(index));
     });
+
+    leftArrow.addEventListener('click', previousImage);
+    rightArrow.addEventListener('click', nextImage);
+});
+
+
+function goToProductPage(productId) {
+    window.location.href = 'cart.html?id=' + productId;
 }
-
-// Initialize the first thumbnail as active
-updateThumbnails();
-
-

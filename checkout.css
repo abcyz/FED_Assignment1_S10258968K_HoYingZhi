@@ -1,0 +1,282 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.search_bar {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.icon:hover {
+    opacity: 0.7;
+}
+
+/* Header Navbar */
+.headernavbar {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.headernavbar > div {
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.headernavbar > div:hover {
+    color: #007bff;
+}
+
+.headernavbar-select {
+    display: none;
+}
+
+@media (max-width: 1080px) {
+    .headernavbar {
+        display: none;
+    }
+
+    .headernavbar-select {
+        display: block;
+    }
+
+    .search_bar {
+        width: 200px;
+    }
+}
+
+/* Checkout Section */
+.checkout-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.checkout-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.checkout-section {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.payment-options label {
+    cursor: pointer;
+}
+
+button.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffc107;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: #e0a800;
+}
+
+/* Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-section {
+    margin-left: auto;
+    text-align: right;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f9f9f9;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ddd;
+}
+
+.footer-section ul li:hover,
+.footer-section p:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+    .footer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer-section {
+        margin-right: 0;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .contact-section {
+        margin-left: 0;
+        text-align: left;
+    }
+}
+
+/* Check Out Button Styles */
+.btn-checkout {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #ffc107;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-checkout:hover {
+    background-color: #e0a800;
+}

@@ -4,134 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aboutus.css">
-    <script src="gamingpc.js"></script>
-    <title>Gaming PC Page</title>
+    <script src="aboutus.js"></script>
+    <script src="navigation.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
+    <title>Front Page</title>
 </head>
 <body>
     <div class="navbar">
-        <img src="images/Logo.png" alt="Logo" class="logo">
-        <input type="search" placeholder="Search..." class="search_bar">
-        <div class="nav-icons">
-            <img src="images/SignIn.jpg" alt="Sign In" class="icon">
-            <img src="images/Heart.png" alt="Heart" class="icon">
-            <img src="images/Cart.jpg" alt="Cart" class="icon">
+        <div class="left-group">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+            <input type="search" placeholder="Search..." class="search_bar">
+        </div>
+        <div class="right-group">
+            <div class="nav-icons">
+                <img src="images/SignIn.jpg" alt="Sign In" class="icon">
+                <img src="images/Heart.png" alt="Heart" class="icon">
+                <img src="images/Cart.png" onclick="goToCartPage('product2')" alt="Cart" class="icon">
+            </div>
+            <div class="headernavbar-select">
+                <select>
+                    <option value="home">Home</option>
+                    <option value="gaming-pcs">Gaming PCs</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="about">About Us</option>
+                    <option value="contact">Contact Us</option>
+                </select>
+            </div>
         </div>
     </div>
-    
+
     <div class="headernavbar">
-        <div>HOME</div>
-        <div>GAMING PCS</div>
+        <div onclick="goToHomePage('product2')">HOME</div>
+        <div onclick="goToGamingPCPage('product2')">GAMING PCS</div>
         <div>LAPTOP</div>
         <div>ACCESSORIES</div>
-        <div>ABOUT US</div>
-        <div>CONTACT US</div>
+        <div onclick="goToAboutUsPage('product2')">ABOUT US</div>
+        <div onclick="goToContactUsPage('product2')"> CONTACT US</div>
     </div>
-    
+
     <section class="about-us">
-        <div class="about-text">
-            <h2>2021</h2>
-            <p>
-                In a time when high-performance PCs seemed out of reach for the average consumer, three friends came together with a shared vision: to make powerful, customizable computers accessible to everyone. Frustrated by the overpriced, proprietary, and unmodifiable systems dominating the market, they decided to take matters into their own hands. With no formal backing and limited resources, they set up a makeshift workshop in a cramped garage. Fueled by a mix of passion and determination, they spent countless late nights tinkering, experimenting, and learning.
-    
-                After months of hard work, they produced their first prototype — a compact and modular PC designed to be easily upgraded and tailored to individual needs. Though rough around the edges, this initial model was enough to ignite their dream of disrupting the industry. The prototype was far from perfect, but it represented the beginning of an exciting journey that would eventually lead them to revolutionize the world of personal computing.
-            </p>
-        </div>
-        <div class="boxes-container">
-            <div class="box">
-                <h3>The Spark of an Idea</h3>
+        <div class="about-container-reverse">
+            <div class="about-image-reverse">
+                <img src="images/AI-1.jpeg" alt="Modular PC" />
+            </div>
+            <div class="about-text-reverse">
+                <h2>Our Mission</h2>
                 <p>
-                    It all began with an idea — a belief that high-quality PCs shouldn’t be limited to those with deep pockets. The team envisioned a future where technology was truly for everyone. Without access to fancy tools or funding, they relied on ingenuity, sketching their first concepts on napkins and scraps of paper. Every failure became a stepping stone to refining their vision.
+                    Bytewave was born from the vision of three friends who believed high-quality PCs should be accessible to everyone. Frustrated with overpriced, unmodifiable systems dominating the market, 
+                    they set up a makeshift workshop in a small garage, relying on passion and creativity to bring their ideas to life. Their first creation, a compact modular PC, was far from perfect but marked the beginning of their mission to revolutionize personal computing.                
                 </p>
             </div>
-            <div class="box">
-                <h3>Prototype 1.0: A Humble Beginning</h3>
-                <p>
-                    The first prototype wasn’t just a computer; it was a statement of possibility. Built with off-the-shelf parts and a lot of creativity, it featured a sleek design and modular architecture that allowed for simple upgrades. While it wasn’t flawless, it proved that their concept was more than just a dream. It gave them the confidence to push forward.
+        </div>
+    </section>
+
+    <section class="about-us">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>2022</h2>
+                <p>Encouraged by early success in 2021, the team refined their designs based on user feedback and launched a crowdfunding campaign that exceeded expectations by 1,000%. This overwhelming support allowed them to scale up operations, invest in advanced tools, and hire a team of like-minded professionals. By the end of the year, Bytewave had sold its first batch of systems, earning a reputation as a promising new player in the custom PC market.
                 </p>
+            </div>
+            <div class="about-image">
+                <img src="images/AI-2.jpeg" alt="Gaming PC Crafting" />
             </div>
         </div>
     </section>
     
     <section class="about-us">
-        <div class="about-text">
-            <h2>2022</h2>
-            <p>
-                Encouraged by the modest success of their prototype, the three friends doubled down on their efforts. With feedback from early testers, they refined their designs and improved the quality of their builds. Word of their project spread through tech forums, and soon, orders started rolling in. To keep up with demand, they expanded their operations beyond the garage, moving into a small but functional workshop.
-    
-                Recognizing the need for greater funding to scale their ambitions, they launched a crowdfunding campaign. The campaign resonated with a growing community of tech enthusiasts who shared their frustration with the PC market. Within weeks, they had exceeded their fundraising goal by a staggering 1,000%, raising enough to invest in advanced tools, hire additional team members, and build a proper production line. By the year’s end, they had sold their first batch of systems, establishing themselves as a promising new player in the industry.
-            </p>
-        </div>
-        <div class="boxes-container">
-            <div class="box">
-                <h3>Growing Pains and Milestones</h3>
-                <p>
-                    Transitioning from a small garage operation to a larger workshop wasn’t easy. There were logistical hurdles, production delays, and countless nights spent troubleshooting issues. However, with each obstacle came valuable lessons that shaped the team’s approach to design and manufacturing. This year also saw the addition of skilled engineers and designers who shared their vision, allowing the team to bring fresh ideas to the table.
-                </p>
+        <div class="about-container-reverse">
+            <div class="about-image-reverse">
+                <img src="images/AI-3.jpeg" alt="Award-Winning PC Design" />
             </div>
-            <div class="box">
-                <h3>The Power of Community</h3>
+            <div class="about-text-reverse">
+                <h2>2023</h2>
                 <p>
-                    The overwhelming support from their crowdfunding campaign validated their belief in the importance of community. Backers not only provided funding but also shared ideas and suggestions that helped shape the product’s next iteration. This collaborative relationship became a cornerstone of the brand, fostering a loyal customer base that championed their mission.
+                    In 2023, Bytewave unveiled its flagship product, the Modulus, at a major tech expo. This modular PC, designed for effortless upgrades and customization, bridged the gap between performance and accessibility. It was hailed as a game-changer by industry experts and customers alike, leading to strategic partnerships and global distribution. Media recognition and industry accolades cemented Bytewave’s position as a rising star in the tech world.
                 </p>
             </div>
         </div>
     </section>
-    
+
     <section class="about-us">
-        <div class="about-text">
-            <h2>2023</h2>
-            <p>
-                With newfound resources and an expanding team, the company took its first major leap into the spotlight. This was the year they officially launched their brand and introduced their flagship product, the "Modulus." Unveiled at a prominent tech expo, the Modulus captivated audiences with its revolutionary design. Built for both enthusiasts and casual users, its modular structure allowed customers to upgrade and customize their PCs without needing extensive technical expertise.
-    
-                The reception was phenomenal. Industry experts hailed the Modulus as a game-changer, praising its affordability, build quality, and user-friendly design. It wasn’t long before the company began receiving inquiries from global retailers eager to stock their products. By the end of the year, they had partnered with major distributors and established a foothold in key markets, marking the beginning of their global expansion.
-            </p>
-        </div>
-        <div class="boxes-container">
-            <div class="box">
-                <h3>The Launch of Modulus: A Defining Moment</h3>
+        <div class="about-container">
+            <div class="about-text">
+                <h2>2024</h2>
                 <p>
-                    The Modulus wasn’t just a product; it was a bold statement of intent. Designed to bridge the gap between performance and accessibility, it won accolades for its innovative approach to modular computing. Customers appreciated the freedom to upgrade components without needing to replace the entire system, a feature that quickly became the brand’s hallmark.
+                    By 2024, Bytewave expanded its product offerings with the EcoPC, an energy-efficient model for environmentally conscious users, and an AI-powered software suite for real-time performance optimization. Committed to sustainability, they introduced eco-friendly packaging and minimized production waste. The opening of their flagship store in June provided a hands-on space for customers to explore their innovations, participate in workshops, and build custom PCs with expert guidance.
                 </p>
             </div>
-            <div class="box">
-                <h3>Recognition and Partnerships</h3>
-                <p>
-                    Media coverage and industry awards catapulted the brand into the limelight. Articles celebrating the "garage startup turned disruptor" generated widespread buzz, attracting attention from retailers and investors alike. Strategic partnerships enabled them to scale production and bring their products to a global audience, solidifying their reputation as trailblazers.
-                </p>
+            <div class="about-image">
+                <img src="images/AI-4.jpeg" alt="Expert Craftsmanship" />
             </div>
         </div>
     </section>
-    
-    <section class="about-us">
-        <div class="about-text">
-            <h2>2024</h2>
-            <p>
-                This year marked a turning point in the company’s journey, as they diversified their product offerings and cemented their place in the industry. Building on the success of the Modulus, they introduced two groundbreaking new products: an AI-powered software suite for real-time performance optimization and the "EcoPC," a compact, energy-efficient model designed for professionals and environmentally conscious users.
-    
-                In addition to product innovation, the company demonstrated a strong commitment to sustainability. They introduced eco-friendly packaging made entirely from recycled materials and pledged to minimize waste in their production process. June saw the grand opening of their first flagship store, a state-of-the-art space where customers could experience the brand firsthand, build custom PCs with expert assistance, and attend workshops.
-            </p>
-        </div>
-        <div class="boxes-container">
-            <div class="box">
-                <h3>Innovation with Purpose</h3>
-                <p>
-                    The launch of the EcoPC and the AI suite highlighted the company’s ability to innovate beyond hardware. The EcoPC’s energy-saving capabilities addressed the growing demand for environmentally responsible technology, while the AI suite empowered users to maximize their systems’ performance effortlessly.
-                </p>
-            </div>
-            <div class="box">
-                <h3>Flagship Store: A New Chapter</h3>
-                <p>
-                    Located in the heart of the city, the flagship store became a hub for tech enthusiasts. It offered hands-on experiences, interactive demos, and personalized consultations, creating a sense of community that reflected the company’s values. The store’s success underscored their evolution from a scrappy startup to an industry leader.
-                </p>
-            </div>
-        </div>
+
+
+
+    <section class="stay-up-to-date">
+        <h2>STAY UP TO DATE</h2>
+        <p>Be the first to know the latest giveaways, developments, and scoops.</p>
+        <form class="subscribe-form">
+            <input type="email" class="email-input" placeholder="Email address" required>
+            <button type="submit" class="subscribe-button">Subscribe</button>
+        </form>
     </section>
-    
-
-
-
-
-
 
 
     <footer class="footer">
@@ -162,7 +141,7 @@
             <p>Bishan City, Street 22</p>
             <p>Singapore 98302 #3-03</p>
         </div>
+
     </footer>
-        
 </body>
 </html>

@@ -3,32 +3,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Navbar */
+/* Navbar General Styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     background-color: white;
     border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
+/* Left Group */
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
 .logo {
-    width: 180px;
+    width: 150px;
     height: auto;
 }
 
+/* Search Bar */
 .search_bar {
     flex: 1;
-    max-width: 600px;
+    width: 400px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    margin: 0 20px;
+    margin-left: 150px;
 }
 
+/* Right Group */
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icons */
 .nav-icons {
     display: flex;
     gap: 15px;
@@ -43,6 +62,16 @@
 
 .icon:hover {
     opacity: 0.7;
+}
+
+/* Dropdown Menu */
+.headernavbar-select select {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
 }
 
 /* Header Navbar */
@@ -65,6 +94,44 @@
 .headernavbar > div:hover {
     color: #007bff;
 }
+
+@media screen and (max-width: 1080px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-group {
+        order: 1;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .right-group {
+        order: 2;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .search_bar {
+        width: 400px;
+    }
+
+    .headernavbar {
+        display: none;
+    }
+
+    .headernavbar-select {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    .headernavbar-select {
+        display: none;
+    }
+}
+
 
 /* Footer */
 .footer {
@@ -145,73 +212,114 @@
 
 
 
-.about-us {
+.about-container {
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    padding: 20px;
-    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
 }
 
 .about-text {
-    flex: 1; 
-    max-width: 50%; 
+    flex: 1;
+    text-align: left;
+    margin-left: 150px;
+    margin-right: 50px;
 }
 
-.about-text h2 {
-    font-size: 36px;
-    margin-bottom: 10px;
-    color: #333;
+.about-image img {
+    width: 500px;
+    height: auto;
+    flex: 1;
+    margin-right: 200px;
 }
 
-.about-text p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    margin-right: 100px;
-}
 
-.boxes-container {
+.about-container-reverse {
     display: flex;
-    flex: 1; 
-    justify-content: space-between; 
-    gap: 20px;
-    flex-wrap: wrap; 
-    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px;
+    margin-top: 70px;
 }
 
-.box {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    max-width: calc(50% - 20px); 
+.about-text-reverse {
+    flex: 1;
+    text-align: left;
+    margin-right: 200px;
+    margin-left: 50px;
+}
+
+.about-image-reverse img {
+    width: 500px;
+    height: auto;
+    flex: 1;
+    margin-left: 150px;
+}
+
+
+/* Stay Up to Date Section */
+.stay-up-to-date {
     text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
 }
 
-.box h3 {
-    font-size: 20px;
+.stay-up-to-date h2 {
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 10px;
     color: #333;
 }
 
-.box p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.5;
+.stay-up-to-date p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
 }
 
-@media (max-width: 768px) {
-    .about-us {
-        flex-direction: column
-    }
+.subscribe-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
 
-    .boxes-container {
+.email-input {
+    flex: 1;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.subscribe-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 1080px) {
+    .subscribe-form {
         flex-direction: column;
-        gap: 10px;
+        gap: 15px;
     }
 
-    .box {
+    .email-input {
         max-width: 100%;
     }
 }
+

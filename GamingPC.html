@@ -5,106 +5,323 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="gamingpc.css">
     <script src="gamingpc.js"></script>
-    <title>Gaming PC Page</title>
+    <script src="navigation.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
+    <title>Gaming3</title>
 </head>
 <body>
     <div class="navbar">
-        <img src="images/Logo.png" alt="Logo" class="logo">
-        <input type="search" placeholder="Search..." class="search_bar">
-        <div class="nav-icons">
-            <img src="images/SignIn.jpg" alt="Sign In" class="icon">
-            <img src="images/Heart.png" alt="Heart" class="icon">
-            <img src="images/Cart.jpg" alt="Cart" class="icon">
+        <div class="left-group">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+            <input type="search" placeholder="Search..." class="search_bar">
+        </div>
+        <div class="right-group">
+            <div class="nav-icons">
+                <img src="images/SignIn.jpg" alt="Sign In" class="icon">
+                <img src="images/Heart.png" alt="Heart" class="icon">
+                <img src="images/Cart.png" onclick="goToCartPage('product2')" alt="Cart" class="icon">
+            </div>
+            <div class="headernavbar-select">
+                <select>
+                    <option value="home">Home</option>
+                    <option value="gaming-pcs">Gaming PCs</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="about">About Us</option>
+                    <option value="contact">Contact Us</option>
+                </select>
+            </div>
         </div>
     </div>
-    
+
     <div class="headernavbar">
-        <div>HOME</div>
-        <div>GAMING PCS</div>
+        <div onclick="goToHomePage('product2')">HOME</div>
+        <div onclick="goToGamingPCPage('product2')">GAMING PCS</div>
         <div>LAPTOP</div>
         <div>ACCESSORIES</div>
-        <div>ABOUT US</div>
-        <div>CONTACT US</div>
+        <div onclick="goToAboutUsPage('product2')">ABOUT US</div>
+        <div onclick="goToContactUsPage('product2')">CONTACT US</div>
     </div>
-    <section class="latest-releases">
-        <div class="title-container">
-            <h2>Original</h2>
-            <h1>These are our signature creations — where innovation meets craftsmanship. Built for gamers who demand the best</h1>
-        </div>
-        <div class="release-container">
-            <div class="release-item">
-                <h4>Title</h4>
-                <img src="images/Cat.jpg" alt="Product 1" class="release-image">
-                <div class="release-description">
-                    <p>Customizable (Red, Blue, or Brown)</p>
-                    <p>RGB backlight</p>
-                    <p>Aluminum frame</p>
-                    <div class="price-bar">From SGD $945</div>
-                    <button class="buy-button">Start Customizing</button>
-                </div>
-            </div>
-            <div class="release-item">
-                <h4>Title</h4>
-                <img src="images/Cat.jpg" alt="Product 2" class="release-image">
-                <div class="release-description">
-                    <p>25,000 adjustable DPI</p>
-                    <p>8 programmable buttons</p>
-                    <p>Lightweight, customizable RGB</p>
-                    <div class="price-bar">From SGD $945</div>
-                    <button class="buy-button">Start Customizing</button>
-                </div>
-            </div>
-            <div class="release-item">
-                <h4>Title</h4>
-                <img src="images/Cat.jpg" alt="Product 3" class="release-image">
-                <div class="release-description">
-                    <p>27-inch QHD</p>
-                    <p>IPS with HDR10 support</p>
-                    <p>USB-C, HDMI, DisplayPort</p>
-                    <div class="price-bar">From SGD $945</div>
-                    <button class="buy-button">Start Customizing</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     
 
-
-
-
-
-
-
-    <footer class="footer">
-        <div class="footer-section">
-            <h3>PRODUCTS</h3>
+    <div class="content-container">
+        <!-- Vertical Navigation Menu -->
+        <nav class="vertical-nav">
             <ul>
-                <li>Gaming PCs</li>
-                <li>Laptops</li>
-                <li>Accessories</li>
+                <li><a href="#originals">PCS Originals</a></li>
+                <li><a href="#exclusive">Exclusive Collaborations</a></li>
+                <li><a href="#limited">Limited Edition Releases</a></li>
             </ul>
-        </div>
-        <div class="footer-section">
-            <h3>COMPANY</h3>
-            <ul>
-                <li>About</li>
-                <li>Careers</li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h3>NEED HELP?</h3>
-            <ul>
-                <li>Support</li>
-                <li>FAQ</li>
-            </ul>
-        </div>
-        <div class="footer-section contact-section">
-            <h3>CONTACT</h3>
-            <p>Bishan City, Street 22</p>
-            <p>Singapore 98302 #3-03</p>
-        </div>
-    </footer>
-        
-</body>
-</html>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section id="originals" class="latest-releases">
+                <div class="title-container">
+                    <h2>Originals</h2>
+                    <h1>These are our signature creations — where innovation meets craftsmanship. Built for gamers who demand the best</h1>
+                </div>
+                <div class="release-container">
+                    <div class="release-item">
+                        <img src="images/PC-16.webp" alt="Product 1" class="release-image">
+                        <div class="release-description">
+                            <h4>Butedance Gaming PC</h4>
+                            <p>Intel Core i9-13900k</p>
+                            <p>NVIDIA RTX 4090</p>
+                            <p>64GB DDR5</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-17.webp" alt="Product 2" class="release-image">
+                        <div class="release-description">
+                            <h4>Bytedance pro</h4>
+                            <p>AMD Ryzen 9 7950X</p>
+                            <p>Dual NVIDIA RTX A60000</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-18.webp" alt="Product 3" class="release-image">
+                        <div class="release-description">
+                            <h4>Bytedance Mini PC</h4>
+                            <p> Intel Core i7-12700                            </p>
+                            <p></p>
+                            <p>Aluminum frame</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-19.webp" alt="Product 4" class="release-image">
+                        <div class="release-description">
+                            <h4>Intel Xeon W-3375</h4>
+                            <p>NVIDIA A100 Tensor Core</p>
+                            <p>RGB backlight</p>
+                            <p>128GB DDR4 ECC
+                            </p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-20.webp" alt="Product 5" class="release-image">
+                        <div class="release-description">
+                            <h4>Bytedance VR Ready PC
+                            </h4>
+                            <p> Intel Core i5-11400F</p>
+                            <p>NVIDIA GTX 1660 Super</p>
+                            <p>32GB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-21.webp" alt="Product 6" class="release-image">
+                        <div class="release-description">
+                            <h4>Bytedance Budge Gaming PC
+                            </h4>
+                            <p>Intel Core i5-11400F
+                            <p>RGB backlight</p>
+                            <p>Aluminum frame</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exclusive" class="latest-releases">
+                <div class="title-container">
+                    <h2></h2>
+                    <h1>2>
+                </div>
+                <div class="release-container">
+                    <div class="release-item">
+                        <img src="images/PC-10.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Phantom Strike</h4>
+                            <p>Intel Core i7-12700K</p>
+                            <p>NVIDIA RTX 3070 Ti</p>
+                            <p>32GB RGB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-11.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Nebula X</h4>
+                            <p>AMD Ryzen 9 7900X</p>
+                            <p>NVIDIA RTX 3080</p>
+                            <p>64GB DDR5</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-12.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Titan Forge</h4>
+                            <p>Intel Core i9-13900KF</p>
+                            <p>NVIDIA RTX 4080</p>
+                            <p >64GB DDR5</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-13.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Zenit Pluse</h4>
+                            <p>AMD Ryzen 7 5800X3D</p>
+                            <p>NVIDIA RTX 3060</p>
+                            <p>16GB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-14.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Hyper Sphere</h4>
+                            <p>Intel Core i7-11700</p>
+
+                            <p>NVIDIA RTX 3070</p>
+                            <p>32GB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-15.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>M Power</h4>
+                            <p>AMD Ryzen 9 7950X</p>
+                            <p>NVIDIA RTX 4090</p>
+                            <p>128GB DDR5</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="limited" class="latest-releases">
+                <div class="title-container">
+                    <h2>Limited Edition Releases</h2>
+                    <h1>Get your hands on these limited edition gaming PCs before they're gone</h1>
+                </div>
+                <div class="release-container">
+                    <div class="release-item">
+                        <img src="images/PC-30.webp" alt="Product 8" class="release-image">
+                        <div class="release-description">
+                            <h4>Airborne</h4>
+                            <p>Intel Core i9-12900KF</p>
+                            <p>RNVIDIA RTX 3080</p>
+                            <p>32GB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-31.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>V12 Turbo</h4>
+                            <p>AMD Ryzen 7 7700X</p>
+                            <p>NVIDIA RTX 4080</p>
+                            <p>64GB DDR5</p>
+
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-32.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Eclipse</h4>
+                            <p>Intel Core i7-11700K</p>
+                            <p> NVIDIA RTX 3060 Ti</p>
+                            <p>16GB DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-33.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Quantum Eclipse</h4>
+                            <p>Intel Core i9-13900K</p>
+                            <p>NVIDIA RTX 4079</p>
+                            <p>Intel Core i9-13900K</p>
+
+
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-34.webp" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>Velocity R1</h4>
+                            <p>AMD Ryzen 9 7950X3D</p>
+                            <p>NVIDIA RTX 4090</p>
+                            <p>64GB DDR5</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+                    <div class="release-item">
+                        <img src="images/PC-35.avif" alt="Product 7" class="release-image">
+                        <div class="release-description">
+                            <h4>All Titan</h4>
+                            <p>Intel Xeon Platinum 8280</p>
+                            <p>NVIDIA A100 Tensor Core</p>
+                            <p>256GB ECC DDR4</p>
+                            <div class="price-bar">From SGD $945</div>
+                            <button class="buy-button">Start Customizing</button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+            
+                <!-- Footer -->
+                <footer class="footer">
+                    <div class="footer-section">
+                        <h3>PRODUCTS</h3>
+                        <ul>
+                            <li>Gaming PCs</li>
+                            <li>Laptops</li>
+                            <li>Accessories</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li>About</li>
+                            <li>Careers</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>NEED HELP?</h3>
+                        <ul>
+                            <li>Support</li>
+                            <li>FAQ</li>
+                        </ul>
+                    </div>
+                    <div class="footer-section contact-section">
+                        <h3>CONTACT</h3>
+                        <p>Bishan City, Street 22</p>
+                        <p>Singapore 98302 #3-03</p>
+                    </div>
+                </footer>
+            </body>
+            </html>
+            

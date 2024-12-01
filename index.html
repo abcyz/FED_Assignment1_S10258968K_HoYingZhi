@@ -5,30 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="frontpage.css">
     <script src="frontpage.js"></script>
+    <script src="navigation.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+        </style>
     <title>Front Page</title>
 </head>
 <body>
     <div class="navbar">
-        <img src="images/Logo.png" alt="Logo" class="logo">
-        <input type="search" placeholder="Search..." class="search_bar">
-        <div class="nav-icons">
-            <img src="images/SignIn.jpg" alt="Sign In" class="icon">
-            <img src="images/Heart.png" alt="Heart" class="icon">
-            <img src="images/Cart.jpg" alt="Cart" class="icon">
+        <div class="left-group">
+            <img src="images/Logo.png" alt="Logo" class="logo">
+            <input type="search" placeholder="Search..." class="search_bar">
+        </div>
+        <div class="right-group">
+            <div class="nav-icons">
+                <img src="images/SignIn.jpg" alt="Sign In" class="icon">
+                <img src="images/Heart.png" alt="Heart" class="icon">
+                <img src="images/Cart.png" onclick="goToCartPage('product2')" alt="Cart" class="icon">
+            </div>
+            <div class="headernavbar-select">
+                <select>
+                    <option value="home" onclick="goToHomePage('product2')">Home </option>
+                    <option value="gaming-pcs" onclick="goToGamingPCPage('product2')">Gaming PCs</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="accessories">Accessories</option>
+                    <option value="about" onclick="goToAboutUsPage('product2')">About Us</option>
+                    <option value="contact" onclick="goToContactUsPage('product2')">Contact Us</option>
+                </select>
+            </div>
         </div>
     </div>
-    
+
     <div class="headernavbar">
         <div>HOME</div>
-        <div>GAMING PCS</div>
+        <div onclick="goToGamingPCPage('product2')">GAMING PCS</div>
         <div>LAPTOP</div>
         <div>ACCESSORIES</div>
-        <div>ABOUT US</div>
-        <div>CONTACT US</div>
+        <div onclick="goToAboutUsPage('product2')">ABOUT US</div>
+        <div onclick="goToContactUsPage('product2')">CONTACT US</div>
     </div>
     
     <div class="advertisment">
-        <img src="images/Cat.jpg" class="advertpic" alt="Advertisement">
+        <img src="images/Advertisment1.png" class="advertpic" alt="Advertisement">
     </div>
 
     <div class="dots-container">
@@ -38,123 +56,152 @@
     </div>
 
 
+    
 
-<section class="latest-releases">
-    <h2>Latest Releases</h2>
-    <div class="release-container">
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 1" class="release-image">
-            <div class="release-description">
-                <h4>Analog Fury X1</h4>
-                <p>Intel i9-13900K</p>
-                <p>NVIDIA GeForce RTX 4090</p>
-                <p>32GB DDR5 6000MHz</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 2" class="release-image">
-            <div class="release-description">
-                <h4>Full-Motion Titan</h4>
-                <p>AMD Threadripper 5995WX</p>
-                <p>NVIDIA RTX A6000</p>
-                <p>128GB DDR4 ECC Memory</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 3" class="release-image">
-            <div class="release-description">
-                <h4>RapidTrigger</h4>
-                <p>Intel i7-1365U</p>
-                <p>27-inch 5K Retina Display</p>
-                <p> 1TB NVMe SSD</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 4" class="release-image">
-            <div class="release-description">
-                <h4>SwiftTrigger 200</h4>
-                <p>AMD Ryzen 3 5300G</p>
-                <p>Integrated AMD Radeon Vega Graphics</p>
-                <p> 8GB DDR4 3200MHz</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 3" class="release-image">
-            <div class="release-description">
-                <h4>RapidTrigger</h4>
-                <p>Intel i7-1365U</p>
-                <p>27-inch 5K Retina Display</p>
-                <p> 1TB NVMe SSD</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="latest-releases">
-    <h2>Other Products</h2>
-    <div class="release-container">
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 1" class="release-image">
-            <div class="release-description">
-                <h4>KeyForgeMX</h4>
-                <p>Customizable (Red, Blue, or Brown)</p>
-                <p>RGB backlight</p>
-                <p>Aluminum frame</p> 
+    <section class="latest-releases">
+        <h2>Our PCs</h2>
+        <div class="release-container">
+            <div class="release-item" onclick="goToProductPage('product1')">
+                <div class="image-container">
+                    <img src="images/PC-1.jpg" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Apex Pro TKL</h4>
+                    <p>Intel Core i7, 16GB RAM</p>
+                    <p>$999</p>
+                </div> 
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/PC-2.jpg" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>MSI Titan GT77</h4>
+                    <p>Intel Core i9, 64GB RAM</p>
+                    <p>$899</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/PC-3.jpg" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>HP Omen 45L</h4>
+                    <p>AMD Ryzen 7, 32GB RAM</p>
+                    <p>$799</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/PC-4.jpg" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Titan Xtreme</h4>
+                    <p>Intel Core i9, 32GB RAM</p>
+                    <p>$699</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/PC-5.jpg" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Gigabyte Aorus 17X</h4>
+                    <p>Intel Core i7, 16GB RAM</p>
+                    <p>$599</p>
+                </div>
             </div>
         </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 2" class="release-image">
-            <div class="release-description">
-                <h4>ShadowGrip Viper</h4>
-                <p>25,000 adjustable DPI</p>
-                <p>8 programmable buttons</p>
-                <p> Lightweight, customizable RGB</p>
+
+    </section>
+
+    <section class="latest-releases">
+        <h2>Other Products </h2>
+        <div class="release-container">
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/MacBook.webp" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>MacBook Pro 16-inch</h4>
+                    <p>Apple M2 Max, 32GB RAM</p>
+                    <p>$349</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/Keyboard-1.webp" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Logitech G Pro X</h4>
+                    <p>Hot-Swappable Mechanical Gaming Keyboard</p>
+                    <p>$149</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/Keyboard-2.webp" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Keychron K8 Pro</h4>
+                    <p>Wireless QMK-Compatible Keyboard</p>
+                    <p>$89</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/Headphone.webp" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>Sony WH-100XM5</h4>
+                    <p>Wireless Noise-Canceling Headphones</p>
+                    <p>$320</p>
+                </div>
+            </div>
+            <div class="release-item">
+                <div class="image-container">
+                    <img src="images/Monitor.webp" alt="Product 1" class="release-image">
+                    <img src="images/Cart.png" alt="Heart Icon" class="heart-icon">
+                </div>
+                <div class="release-description">
+                    <h4>LG UltraGear 2</h4>
+                    <p>27" 4k UHD Gaming Monitor</p>
+                    <p>$679</p>
+                </div>
             </div>
         </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 3" class="release-image">
-            <div class="release-description">
-                <h4>VisionEdge 27Q</h4>
-                <p>27-inch QHD</p>
-                <p>IPS with HDR10 support</p>
-                <p>USB-C, HDMI, DisplayPort</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 4" class="release-image">
-            <div class="release-description">
-                <h4>FrostCore Xtreme</h4>
-                <p>All-in-one liquid cooling system</p>
-                <p>Supports Intel and AMD</p>
-                <p>RGB pump head, dual fans</p>
-            </div>
-        </div>
-        <div class="release-item">
-            <img src="images/Cat.jpg" alt="Product 3" class="release-image">
-            <div class="release-description">
-                <h4>RapidTrigger</h4>
-                <p>Intel i7-1365U</p>
-                <p>27-inch 5K Retina Display</p>
-                <p> 1TB NVMe SSD</p>
-            </div>
-        </div>
-    </div>
-</section>
+
+    </section>
+        
+    
+
+
 
     
     <div class="TrustedSection">
         <h2>Trusted By Corporations, Customers, Creators</h2>
         <div class="trusted_pic_container">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
-            <img src="images/Cat.jpg" class="trusted_pic">
+            <img src="images/Corporation1.jpg" class="trusted_pic">
+            <img src="images/Corporation2.jpg" class="trusted_pic">
+            <img src="images/Corporation3.jpg" class="trusted_pic">
+            <img src="images/Corporation4.jpg" class="trusted_pic">
+            <img src="images/Corporation5.jpg" class="trusted_pic">
+            <img src="images/Corporation6.png" class="trusted_pic">
+            <img src="images/Corporation7.png" class="trusted_pic">
+            <img src="images/Corporation8.png" class="trusted_pic">
+            <img src="images/Creator1.jpg" class="trusted_pic">
+            <img src="images/Creator2.webp" class="trusted_pic">
+
         </div>
     </div>
 
@@ -197,6 +244,5 @@
             <p>Singapore 98302 #3-03</p>
         </div>
     </footer>
-        
 </body>
 </html>

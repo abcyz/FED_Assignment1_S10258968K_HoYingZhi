@@ -3,32 +3,63 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Navbar */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Navbar General Styles */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     background-color: white;
     border-bottom: 1px solid #ccc;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
+/* Left Group */
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Logo */
 .logo {
-    width: 180px;
+    width: 150px;
     height: auto;
 }
 
+/* Search Bar */
 .search_bar {
     flex: 1;
-    max-width: 600px;
+    width: 400px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
-    margin: 0 20px;
+    margin-left: 150px;
 }
 
+/* Right Group */
+.right-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Icons */
 .nav-icons {
     display: flex;
     gap: 15px;
@@ -45,16 +76,27 @@
     opacity: 0.7;
 }
 
+/* Dropdown Menu */
+.headernavbar-select select {
+    width: 150px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+}
+
 /* Header Navbar */
 .headernavbar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: #333;
     padding: 15px 0;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
+    color: white;
 }
 
 .headernavbar > div {
@@ -66,12 +108,49 @@
     color: #007bff;
 }
 
-/* Section Styling */
+@media screen and (max-width: 1080px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .left-group {
+        order: 1;
+        flex: 1;
+        justify-content: flex-start;
+    }
+
+    .right-group {
+        order: 2;
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    .search_bar {
+        width: 400px;
+    }
+
+    .headernavbar {
+        display: none;
+    }
+
+    .headernavbar-select {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1081px) {
+    .headernavbar-select {
+        display: none;
+    }
+}
+
+
 .main-content {
     display: flex;
-    justify-content: center; /* Centers the content horizontally */
-    align-items: center; /* Centers the content vertically */
-    min-height: 100vh; /* Ensures the section takes the full viewport height */
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh;
     padding: 20px;
 }
 
@@ -80,76 +159,16 @@
     gap: 20px;
     padding: 20px;
     align-items: flex-start;
-    max-width: 1200px; /* Restricts the width of the content */
+    max-width: 1200px;
     width: 100%;
-    flex-wrap: wrap; /* Allows content to wrap on smaller screens */
+    flex-wrap: wrap; 
+    
 }
 
-/* Dropdown styling */
-.dropdown {
-    display: inline-block;
-    position: relative;
-    width: 150px; /* Matches Add to Cart button width */
-}
-
-.dropdown button {
-    background-color: hsl(0, 0%, 80%);
-    color: white;
-    padding: 15px 20px;
-    border: none;
-    cursor: pointer;
-    width: 150px;
-    text-align: left;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown button:hover {
-    background-color: hsl(0, 0%, 70%);
-}
-
-.dropdown .content {
-    display: none;
-    position: absolute;
-    background-color: hsl(0, 0%, 95%);
-    width: 150px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 10;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.dropdown a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: black;
-    text-decoration: none;
-    padding: 10px 15px;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
-.dropdown a:hover {
-    background-color: hsl(0, 0%, 90%);
-}
-
-.dropdown-img {
-    width: 30px;
-    height: 30px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid hsl(0, 0%, 80%);
-}
-
-.dropdown:hover .content {
-    display: block;
-}
 
 /* Add to Cart button */
 .add-to-cart {
-    background-color: #007BFF;
+    background-color: #ff1a1a;
     color: white;
     padding: 15px 20px;
     border: none;
@@ -203,18 +222,24 @@
 /* General Image Styling */
 .thumbnail-container {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
     margin-top: 10px;
     gap: 10px;
 }
 
+.image-gallery {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
 .thumbnail {
-    width: 80px;
-    height: 60px;
+    width: 100px;
+    height: 70px;
     object-fit: cover;
     border: 2px solid transparent;
     cursor: pointer;
-    border-radius: 5px;
     transition: border 0.3s ease;
 }
 
@@ -250,6 +275,11 @@
     z-index: 1;
     border-radius: 50%;
     transition: background-color 0.3s ease;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow:hover {
@@ -257,12 +287,102 @@
 }
 
 .left-arrow {
-    left: 10px;
+    left: -50px; 
 }
 
-.right-arrow {
-    right: 10px;
+.right-arrow {        
+    right: -50px; 
 }
+
+
+/* Content Container */
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 200px; 
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-image-container {
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+
+.product-details {
+    max-width: 200px;
+    margin: 0px;
+}
+
+@media (max-width: 1080px) {
+    .product-showcase {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-image-container {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .product-details {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.select-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; 
+    align-items: flex-start;
+}
+
+.select-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+select {
+    width: 300px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M1 4l5 5 5-5z' fill='%23999'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    cursor: pointer;
+}
+
+select:hover {
+    background-color: #f1f1f1;
+    border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .select-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    select {
+        width: 100%;
+    }
+}
+
 /* Footer */
 .footer {
     display: flex;
@@ -338,4 +458,77 @@
     .footer-section h3:hover + ul, .footer-section h3:hover + p {
         display: block;
     }
+}
+
+
+/* Divider Line */
+.section-divider {
+    border: 1px solid #ccc;
+    margin: 30px 0;
+}
+
+/* About and Reviews Container */
+.about-and-reviews {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+
+/* About Product Section */
+.about-product {
+    flex: 1;
+    max-width: 60%;
+    margin-right: 100px;
+    margin-left: 100px;
+
+}
+
+.about-product h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-product p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+
+}
+
+
+
+/* Reviews Section */
+.reviews {
+    flex: 1;
+    max-width: 40%;
+}
+
+.reviews h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.review-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.review-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-text h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.review-text p {
+    font-size: 14px;
+    color: #555;
 }
